@@ -1,10 +1,11 @@
 # Breadboard
 
-A Claude Code skill for technical shaping  designing features before implementation using structured "breadboard" documents.
+An AI agent skill for technical shaping. Designing features before
+implementation using structured "breadboard" documents.
 
 ## Startup Context
 
-This skill uses two files that should be loaded in Claude's startup context via `CLAUDE.md`:
+This skill uses two files that should be loaded in the agent's startup context:
 
 - `SHAPING.md`  Core concepts, table formats, and conventions
 - `BREADBOARD_TEMPLATE.md`  Starter template for new breadboards
