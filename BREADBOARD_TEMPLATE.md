@@ -62,6 +62,24 @@ Status values: `Core goal`, `Must-have`, `Should`, `Out`, `Undecided`
 
 ---
 
+## Eliminated Shapes
+
+[Record shapes that were considered and why they were eliminated. Preserves decision history.]
+
+| Shape | Name | Why Eliminated |
+|-------|------|----------------|
+| A | | |
+
+---
+
+## What's Unsolved
+
+[Open design questions that block progress. Updated each session for resumption.]
+
+-
+
+---
+
 ## Open Questions
 
 - [ ] 
