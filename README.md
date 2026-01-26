@@ -1,6 +1,6 @@
 # Breadboard
 
-An AI agent skill for technical shaping. Designing features before
+An AI agent skill for technical shaping: Designing features before
 implementation using structured "breadboard" documents.
 
 ## Startup Context
