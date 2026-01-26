@@ -24,6 +24,7 @@ The shaping workflow is driven by natural language commands:
 | `Populate code affordances` | Extract backend/code elements from the shape |
 | `Wire it up` | Connect affordances and generate a wiring diagram |
 | `Show breadboard` | Display current state of all tables |
+| `Where did we leave off?` | Summarize selected shape, fit check status, what's unsolved |
 
 ## Output
 
