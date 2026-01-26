@@ -7,8 +7,8 @@ implementation using structured "breadboard" documents.
 
 This skill uses two files that should be loaded in the agent's startup context:
 
-- `SHAPING.md`  Core concepts, table formats, and conventions
-- `BREADBOARD_TEMPLATE.md`  Starter template for new breadboards
+- `SHAPING.md` - Core concepts, table formats, and conventions
+- `BREADBOARD_TEMPLATE.md` - Starter template for new breadboards
 
 ## User Interaction
 
@@ -29,8 +29,8 @@ The shaping workflow is driven by natural language commands:
 
 Breadboards are saved to `docs/shaping/[feature-name].md` and contain:
 
-1. **Requirements**  What must be accomplished (with IDs and priorities)
-2. **Shapes**  Solution approaches with named mechanisms
-3. **Fit Check**  Matrix mapping requirements to shape mechanisms
-4. **Affordances**  UI and code elements extracted from the shape
-5. **Wiring Diagram**  ASCII diagram showing how affordances connect
+1. **Requirements** - What must be accomplished (with IDs and priorities)
+2. **Shapes** - Solution approaches with named mechanisms
+3. **Fit Check** - Matrix mapping requirements to shape mechanisms
+4. **Affordances** - UI and code elements extracted from the shape
+5. **Wiring Diagram** - ASCII diagram showing how affordances connect
