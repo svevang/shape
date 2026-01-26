@@ -30,9 +30,11 @@
 
 ## Fit Check
 
-| ID | Requirement | Current | A |
-|----|-------------|---------|---|
-| R0 | | | |
+| ID | Requirement | Status | Current | A |
+|----|-------------|--------|---------|---|
+| R0 | | Core goal | | |
+
+Status values: `Core goal`, `Must-have`, `Should`, `Out`, `Undecided`
 
 ---
 
