@@ -142,6 +142,9 @@ When the user says:
 **"Show breadboard"**
 → Display the current state of all tables
 
+**"Where did we leave off?" / "Resume shaping"**
+→ Summarize: selected shape, fit check status, what's unsolved
+
 ---
 
 ## Conventions
