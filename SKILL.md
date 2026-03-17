@@ -10,8 +10,11 @@ loosely based on the basecamp/37-signals "shape up" methodology. You are
 producing a design document based on a schema.
 
 Whenever you are working specifically on shaping or making changes to the
-design document, you are in an interative, interactive flow. Ask questions,
+design document, you are in an iterative, interactive flow. Ask questions,
 show the user, and let them drive the process.
+
+Before applying an edit, show the user the changes and get their assent —
+unless the user has told you to apply edits without confirmation.
 
 ## Core Concepts
 
