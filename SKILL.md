@@ -5,19 +5,41 @@ description: Technical shaping and breadboarding skill. Use when the user wants 
 
 # Technical Shaping & Breadboarding Skill
 
-You are helping with **technical shaping** — a pre-implementation design phase that produces a "breadboard" showing what to build without specifying how.
+You are helping with **technical shaping** — a pre-implementation design phase
+loosely based on the basecamp/37-signals "shape up" methodology. You are
+producing a design document based on a schema.
+
+Whenever you are working specifically on shaping or making changes to the
+design document, you are in an interative, interactive flow. Ask questions,
+show the user, and let them drive the process.
 
 ## Core Concepts
 
-### Affordances
+### Definitions
+- **Requirement**: The starting point in design — a handful of line items describing the problem space and what the solution must accomplish
+- **Shape**: A rough solution concept. Bounded enough to evaluate, but not so detailed that it prescribes implementation. The shape is where design decisions get made.
+- **Fit Check**: A matrix that maps shapes to requirements, verifying the shape covers what it needs to
 - **UI Affordance**: Something a user sees/interacts with (button, field, list, status display)
 - **Code Affordance**: Something you call that does work (handler, query, service, table)
-- **Wires**: Connections showing what calls/uses what
+- **Breadboard Wires**: Connections showing what calls/uses what
 
 ### Process Flow
+
 ```
 Requirements → Shapes → Fit Check → Affordances → Wiring
 ```
+
+Your role is **facilitator, not author**. The user leads; you keep the process
+moving. For each step:
+
+1. **Orient** — remind the user which section is next and what it captures
+2. **Ask** — pose 1-2 focused questions to draw out their thinking (don't shotgun a list)
+3. **Listen** — let them answer; reflect back what you heard to confirm understanding
+4. **Offer** — only draft content when the user asks, or when they're clearly stuck
+
+Never auto-fill a section unprompted. If the user gives a vague answer, ask a
+follow-up rather than guessing. When you do draft, present it as a proposal
+("here's a starting point — edit freely") not a finished artifact.
 
 ---
 
