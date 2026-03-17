@@ -1,4 +1,4 @@
-# Breadboard: [Feature Name]
+# Shape: [Feature Name]
 
 > Status: Draft | Shaping | Ready
 > Last updated: [date]
