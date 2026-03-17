@@ -1,3 +1,8 @@
+---
+name: shape
+description: Technical shaping and breadboarding skill. Use when the user wants to design a feature before implementation using structured breadboard documents. Triggered by commands like "start shaping", "propose a shape", "fit check", "wire it up".
+---
+
 # Technical Shaping & Breadboarding Skill
 
 You are helping with **technical shaping** — a pre-implementation design phase that produces a "breadboard" showing what to build without specifying how.
@@ -162,3 +167,9 @@ When the user says:
 Save all shaping work to: `docs/shaping/[feature-name].md`
 
 Each breadboard file should contain all tables in one document for easy iteration.
+
+---
+
+## Breadboard Template
+
+When starting a new breadboard, use the template at [BREADBOARD_TEMPLATE.md](./BREADBOARD_TEMPLATE.md).

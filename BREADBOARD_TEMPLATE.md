@@ -82,4 +82,4 @@ Status values: `Core goal`, `Must-have`, `Should`, `Out`, `Undecided`
 
 ## Open Questions
 
-- [ ] 
+- [ ]

@@ -1,18 +1,31 @@
 # Breadboard
 
-An AI agent skill for technical shaping: Designing features before
+An AI agent skill for technical shaping: designing features before
 implementation using structured "breadboard" documents.
 
-## Startup Context
+## Install
 
-This skill uses two files that should be loaded in the agent's startup context:
+```bash
+git clone <this-repo>
+cd breadboard
+./install.sh
+```
 
-- `SHAPING.md` - Core concepts, table formats, and conventions
-- `BREADBOARD_TEMPLATE.md` - Starter template for new breadboards
+This installs the skill globally for both **Claude Code** and **Pi Agent**.
 
-## User Interaction
+## Usage
 
-The shaping workflow is driven by natural language commands:
+In Claude Code:
+```
+/shape
+```
+
+In Pi:
+```
+/skill:shape
+```
+
+Then converse naturally using shaping commands:
 
 | Command | What it does |
 |---------|--------------|

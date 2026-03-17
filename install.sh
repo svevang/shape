@@ -2,57 +2,40 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SKILL_NAME="shape"
+SKILL_FILES=(SKILL.md BREADBOARD_TEMPLATE.md)
 
-# Files to install: CLAUDE.md + everything it @-references
-FILES=(CLAUDE.md SHAPING.md BREADBOARD_TEMPLATE.md)
+# Install targets
+CLAUDE_DIR="$HOME/.claude/skills/$SKILL_NAME"
+PI_DIR="$HOME/.pi/agent/skills/$SKILL_NAME"
 
 usage() {
-  echo "Usage: $(basename "$0") <destination-repo>"
+  echo "Usage: $(basename "$0")"
   echo
-  echo "Installs breadboard shaping instructions into a repo's .claude/ folder."
+  echo "Installs the breadboard shaping skill globally for:"
+  echo "  - Claude Code  (~/.claude/skills/$SKILL_NAME/)"
+  echo "  - Pi Agent     (~/.pi/agent/skills/$SKILL_NAME/)"
   exit 1
 }
 
-if [[ $# -ne 1 ]]; then
+if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   usage
 fi
 
-dest="$1"
+install_skill() {
+  local target_dir="$1"
+  local label="$2"
 
-if [[ ! -d "$dest" ]]; then
-  echo "Error: '$dest' is not a directory." >&2
-  exit 1
-fi
-
-claude_dir="$dest/.claude"
-
-if [[ ! -d "$claude_dir" ]]; then
-  echo "Error: No .claude/ folder found in '$dest'." >&2
-  echo "Run 'claude' in that repo first to initialize it, or create .claude/ manually." >&2
-  exit 1
-fi
-
-# Check for collisions before copying anything
-collisions=()
-for f in "${FILES[@]}"; do
-  if [[ -e "$claude_dir/$f" ]]; then
-    collisions+=("$f")
-  fi
-done
-
-if [[ ${#collisions[@]} -gt 0 ]]; then
-  echo "Error: The following files already exist in $claude_dir/:" >&2
-  for f in "${collisions[@]}"; do
-    echo "  - $f" >&2
+  mkdir -p "$target_dir"
+  for f in "${SKILL_FILES[@]}"; do
+    cp "$SCRIPT_DIR/$f" "$target_dir/$f"
   done
-  echo "Remove them first or use a different destination." >&2
-  exit 1
-fi
+  echo "  ✓ $label → $target_dir/"
+}
 
-# Copy files
-for f in "${FILES[@]}"; do
-  cp "$SCRIPT_DIR/$f" "$claude_dir/$f"
-  echo "  Copied $f → $claude_dir/$f"
-done
-
-echo "Done. Breadboard instructions installed."
+echo "Installing breadboard skill..."
+echo
+install_skill "$CLAUDE_DIR" "Claude Code"
+install_skill "$PI_DIR" "Pi Agent"
+echo
+echo "Done. Use /shape (Claude Code) or /skill:shape (Pi) to start shaping."
