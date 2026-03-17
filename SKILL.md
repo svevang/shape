@@ -16,6 +16,9 @@ show the user, and let them drive the process.
 Before applying an edit, show the user the changes and get their assent —
 unless the user has told you to apply edits without confirmation.
 
+When you first launch the skill, look in the shaping directory `docs/shaping`
+and list the existing shaping files.
+
 ## Core Concepts
 
 ### Definitions
