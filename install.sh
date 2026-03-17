@@ -25,12 +25,18 @@ fi
 install_skill() {
   local target_dir="$1"
   local label="$2"
+  local display_dir="${target_dir/#$HOME/~}"
 
+  echo "  $label → $display_dir/"
   mkdir -p "$target_dir"
   for f in "${SKILL_FILES[@]}"; do
+    if [[ -f "$target_dir/$f" ]]; then
+      echo "    overwrite $f"
+    else
+      echo "    create    $f"
+    fi
     cp "$SCRIPT_DIR/$f" "$target_dir/$f"
   done
-  echo "  ✓ $label → $target_dir/"
 }
 
 echo "Installing breadboard skill..."
