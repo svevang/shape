@@ -164,7 +164,8 @@ When the user says:
 
 ## File Structure
 
-Save all shaping work to: `docs/shaping/[feature-name].md`
+Save all shaping work to: `docs/shaping/NN-[feature-name].md` where NN is a
+zero-padded sequence number (e.g., 01-my-feature.md, 02-another-feature.md)
 
 Each breadboard file should contain all tables in one document for easy iteration.
 
