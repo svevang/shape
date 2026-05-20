@@ -7,6 +7,7 @@ SKILL_FILES=(SKILL.md BREADBOARD_TEMPLATE.md)
 
 # Install targets
 CLAUDE_DIR="$HOME/.claude/skills/$SKILL_NAME"
+CODEX_DIR="$HOME/.codex/skills/$SKILL_NAME"
 PI_DIR="$HOME/.pi/agent/skills/$SKILL_NAME"
 
 usage() {
@@ -14,6 +15,7 @@ usage() {
   echo
   echo "Installs the breadboard shaping skill globally for:"
   echo "  - Claude Code  (~/.claude/skills/$SKILL_NAME/)"
+  echo "  - Codex        (~/.codex/skills/$SKILL_NAME/)"
   echo "  - Pi Agent     (~/.pi/agent/skills/$SKILL_NAME/)"
   exit 1
 }
@@ -42,6 +44,7 @@ install_skill() {
 echo "Installing breadboard skill..."
 echo
 install_skill "$CLAUDE_DIR" "Claude Code"
+install_skill "$CODEX_DIR" "Codex"
 install_skill "$PI_DIR" "Pi Agent"
 echo
-echo "Done. Use /shape (Claude Code) or /skill:shape (Pi) to start shaping."
+echo "Done. Use /shape (Claude Code), \$shape (Codex), or /skill:shape (Pi) to start shaping."

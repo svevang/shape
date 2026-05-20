@@ -101,13 +101,18 @@ cd shape
 ./install.sh
 ```
 
-This installs the skill globally for both **Claude Code** and **Pi Agent**.
+This installs the skill globally for **Claude Code**, **Codex**, and **Pi Agent**.
 
 ## Usage
 
 In Claude Code:
 ```
 /shape
+```
+
+In Codex:
+```
+$shape
 ```
 
 In Pi:
