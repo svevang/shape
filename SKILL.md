@@ -152,7 +152,7 @@ ASCII diagram showing flow between affordances, grouped by place/trigger.
 When the user says:
 
 **"Start shaping [feature]"**
-→ Create a new breadboard file, begin with requirements gathering
+→ Create a new breadboard file or shaping directory, begin with requirements gathering
 
 **"Add requirement: [description]"**
 → Add to requirements table with next available ID
@@ -213,10 +213,70 @@ present design, not as a precise history of how each decision was reached.
 
 ## File Structure
 
-Save all shaping work to: `docs/shaping/NN-[feature-name].md` where NN is a
-zero-padded sequence number (e.g., 01-my-feature.md, 02-another-feature.md)
+Shaping work can use either a single-file form or a directory form.
 
-Each breadboard file should contain all tables in one document for easy iteration.
+### Single-file form
+
+Use this when the shape has no supporting files:
+
+`docs/shaping/NN-[feature-name].md`
+
+Example: `docs/shaping/01-my-feature.md`
+
+### Directory form
+
+Use this when the shape has supporting material such as PDFs, screenshots,
+sample data, logs, diagrams, or research notes:
+
+`docs/shaping/NN-[feature-name]/[feature-name].md`
+
+Example:
+
+```text
+docs/shaping/02-import-flow/
+  import-flow.md
+  resources/
+    product-brief.pdf
+    current-flow.png
+  notes/
+    research.md
+```
+
+When an entry under `docs/shaping` is a directory, treat the matching markdown
+file inside it as the primary breadboard. The repeated feature name is
+intentional so the document keeps its identity if copied or emailed by itself.
+
+The supporting file layout inside the directory is intentionally flexible; use
+whatever grouping makes the material easiest to understand for that shape. The
+example above is only illustrative.
+
+Supporting files are part of the shape context by proximity. Do not require a
+manifest, index, or supporting-material table. When working on a directory-form
+shape, inspect the directory contents first, then read only the supporting
+files that appear relevant to the current shaping question. Reference
+supporting files naturally in prose when they inform a requirement, shape,
+tradeoff, affordance, or open question.
+
+### Converting to directory form
+
+When converting an existing single-file shape to directory form, move:
+
+`docs/shaping/NN-[feature-name].md`
+
+to:
+
+`docs/shaping/NN-[feature-name]/[feature-name].md`
+
+After moving the file, update relative links inside the markdown because the
+document is now one directory deeper. For example, a link that used to point to
+`../assets/example.png` from `docs/shaping/NN-[feature-name].md` may need to
+point to `../../assets/example.png` from
+`docs/shaping/NN-[feature-name]/[feature-name].md`. Links to supporting files
+placed inside the new shape directory should be rewritten relative to the new
+markdown file location.
+
+Each breadboard should contain all core tables in one document for easy
+iteration.
 
 ---
 

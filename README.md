@@ -124,7 +124,7 @@ Then converse naturally using shaping commands:
 
 | Command | What it does |
 |---------|--------------|
-| `Start shaping [feature]` | Create a new breadboard file, begin requirements gathering |
+| `Start shaping [feature]` | Create a new breadboard file or shaping directory, begin requirements gathering |
 | `Add requirement: [description]` | Add a row to the requirements table |
 | `Propose a shape` | Generate a solution approach that addresses requirements |
 | `Fit check` | Create/update matrix showing how shapes satisfy requirements |
@@ -136,7 +136,27 @@ Then converse naturally using shaping commands:
 
 ## Output
 
-Breadboards are saved to `docs/shaping/[feature-name].md` and contain:
+Breadboards can be saved as either:
+
+```text
+docs/shaping/NN-[feature-name].md
+docs/shaping/NN-[feature-name]/[feature-name].md
+```
+
+Use the directory form when a shape has supporting material. The supporting
+file layout inside the directory is flexible.
+
+```text
+docs/shaping/02-import-flow/
+  import-flow.md
+  resources/
+    product-brief.pdf
+    current-flow.png
+  notes/
+    research.md
+```
+
+Breadboards contain:
 
 1. **Requirements** - What must be accomplished (with IDs and priorities)
 2. **Shapes** - Solution approaches with named mechanisms
