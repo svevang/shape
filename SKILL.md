@@ -188,6 +188,27 @@ When the user says:
 - Always preserve the markdown file between iterations
 - Tables are the source of truth — the AI operates best on tables
 
+### Reader-First Determinations
+
+Write determinations for the reader who opens the breadboard later, not as a
+transcript of every turn in the shaping conversation.
+
+Prefer positive statements of the current shape:
+
+- "HLS feed scoping is represented by `Apple::ShowFeedBinding` rows"
+- "`Apple::Config` remains the delegated-delivery config"
+- "The HLS mirror stores state per episode and binding"
+
+Use negative determinations sparingly, and only when the rejected path is a
+real implementation hazard a future reader might reasonably choose. Avoid
+phrasing that mainly explains a past conversational detour, such as "do not
+rename X" or "this intentionally does not use Y", unless that contrast is
+needed to prevent a likely mistake.
+
+Decision history belongs in eliminated shapes, open questions, or short notes
+when it helps implementation judgment. The main shape should read as the
+present design, not as a precise history of how each decision was reached.
+
 ---
 
 ## File Structure

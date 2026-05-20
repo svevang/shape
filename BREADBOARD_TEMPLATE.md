@@ -64,7 +64,7 @@ Status values: `Core goal`, `Must-have`, `Should`, `Out`, `Undecided`
 
 ## Eliminated Shapes
 
-[Record shapes that were considered and why they were eliminated. Preserves decision history.]
+[Record eliminated shapes when the contrast helps future implementation judgment. Keep this concise; the main shape should read as the present design, not a precise history of every decision.]
 
 | Shape | Name | Why Eliminated |
 |-------|------|----------------|
