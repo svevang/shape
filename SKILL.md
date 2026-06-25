@@ -209,11 +209,26 @@ Also, consider carefully if affordance details have leaked into the shape. We
 must make sure that the shape is as pure as possible and does not reflect the
 underlying architecture and implementation details.
 
-Use negative determinations sparingly, and only when the rejected path is a
-real implementation hazard a future reader might reasonably choose. Avoid
-phrasing that mainly explains a past conversational detour, such as "do not
-rename X" or "this intentionally does not use Y", unless that contrast is
-needed to prevent a likely mistake.
+### Reader-First Determinations
+
+Write determinations for the hypothetical reader who opens the shaping document
+and is reading it freshly — not as a transcript of every turn in the shaping
+conversation. The reader should not see the archaeology of the document
+construction, rather they should see a polished, self-contained, product that
+stands on its own, irrespective of history.
+
+Ensure that you do not make edits as a reaction to what was previously written.
+You must create the structure of the shaping document so it is forward looking,
+not backward or reactionary to a previous decision -- only express the forward
+and positive elements of the shaping document. You must create a document with
+a clear presentation, not a history or record of decisions.
+
+Prefer positive statements of the current shape. Use negative determinations
+sparingly, and only when the rejected path is a real implementation hazard a
+future reader might reasonably choose. Do not use phrasing that mainly explains
+a past conversational detour, such as "do not rename X" or "this intentionally
+does not use Y", unless that contrast is absolutely needed to prevent a likely
+mistake.
 
 Decision history belongs in eliminated shapes, open questions, or short notes
 when it helps implementation judgment. The main shape should read as the
