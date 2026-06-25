@@ -188,16 +188,26 @@ When the user says:
 - Always preserve the markdown file between iterations
 - Tables are the source of truth — the AI operates best on tables
 
-### Reader-First Determinations
+### Conciseness
 
-Write determinations for the reader who opens the breadboard later, not as a
-transcript of every turn in the shaping conversation.
+Please make sure to remove all unnecessary language and verbiage. You must keep
+the language as simple and spare as possible. If a single sentence will
+suffice, then only use a single sentence. Don't aggregate edits, instead you
+must resolve.
 
-Prefer positive statements of the current shape:
+We must keep requirements as clear and plain as possible. It should reflect the
+user story and motivation of the end user. If the goal is to build tool, then
+the requirements reflect the user that holds it. If the goal is a website, it's
+the user that browses it.
 
-- "HLS feed scoping is represented by `Apple::ShowFeedBinding` rows"
-- "`Apple::Config` remains the delegated-delivery config"
-- "The HLS mirror stores state per episode and binding"
+If there is a requirement with large and complex descriptions, this could
+indicate if there are shaping level details that could be extracted out to the
+shaping section. Carefully review to see it there are shaping details that can
+be extracted.
+
+Also, consider carefully if affordance details have leaked into the shape. We
+must make sure that the shape is as pure as possible and does not reflect the
+underlying architecture and implementation details.
 
 Use negative determinations sparingly, and only when the rejected path is a
 real implementation hazard a future reader might reasonably choose. Avoid
