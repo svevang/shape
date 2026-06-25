@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILL_NAME="shape"
-SKILL_FILES=(SKILL.md BREADBOARD_TEMPLATE.md)
+SKILL_FILES=(SKILL.md)
 
 # Install targets
 CLAUDE_DIR="$HOME/.claude/skills/$SKILL_NAME"
