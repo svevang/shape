@@ -136,10 +136,12 @@ Then converse naturally using shaping commands:
 
 ## Output
 
-Breadboards can be saved as either:
+Breadboards can be saved as either a file or a directory:
 
 ```text
+# single file form
 docs/shaping/NN-[feature-name].md
+# directory form
 docs/shaping/NN-[feature-name]/[feature-name].md
 ```
 
@@ -148,6 +150,7 @@ file layout inside the directory is flexible.
 
 ```text
 docs/shaping/02-import-flow/
+  AGENTS.md            # optional per-shape instructions for the agent
   import-flow.md
   resources/
     product-brief.pdf

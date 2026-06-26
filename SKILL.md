@@ -259,6 +259,7 @@ Example:
 
 ```text
 docs/shaping/02-import-flow/
+  AGENTS.md
   import-flow.md
   resources/
     product-brief.pdf
@@ -281,6 +282,12 @@ shape, inspect the directory contents first, then read only the supporting
 files that appear relevant to the current shaping question. Reference
 supporting files naturally in prose when they inform a requirement, shape,
 tradeoff, affordance, or open question.
+
+If there is an AGENTS.md file in the directory it will provide you with
+additional shape-specific context, workflows, and details. Please read this
+file in its entirety in the context of this skill and the shape it is nested
+within. The nested AGENTS.md file is an extension for this skill that only
+applies to the shape being worked on.
 
 ### Converting to directory form
 
