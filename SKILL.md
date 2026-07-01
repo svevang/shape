@@ -313,8 +313,8 @@ a past conversational detour, such as "do not rename X" or "this intentionally
 does not use Y", unless that contrast is absolutely needed to prevent a likely
 mistake.
 
-Decision history belongs in eliminated shapes, open questions, or short notes
-when it helps implementation judgment. The main shape should read as the
+Decision history belongs in eliminated shapes, the What's Unsolved section, or
+short notes when it helps implementation judgment. The main shape should read as the
 present design, not as a precise history of how each decision was reached.
 
 ---
@@ -395,19 +395,13 @@ Legend: ✅ = satisfied, ❌ = not satisfied, – = not applicable
 
 | Shape | Name | Why Eliminated |
 |-------|------|----------------|
-| A | | |
+| B | | |
 
 ---
 
 ## What's Unsolved
 
 [Open design questions that block progress. Updated each session for resumption.]
-
--
-
----
-
-## Open Questions
 
 - [ ]
 ````
