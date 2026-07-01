@@ -247,6 +247,10 @@ When the user says:
 **"Fit check"**
 → Generate/update the fit check matrix
 
+**"Choose shape [letter]"**
+→ Record the selection in the header, move the other shapes to Eliminated
+Shapes with a reason for each
+
 **"Populate UI affordances"**
 → Extract UI affordances from the chosen shape
 
@@ -328,6 +332,7 @@ When starting a new breadboard, use this markdown template:
 # Shape: [Feature Name]
 
 > Status: Draft | Shaping | Ready
+> Selected shape: [letter, once chosen]
 > Last updated: [date]
 
 ## Problem Statement
