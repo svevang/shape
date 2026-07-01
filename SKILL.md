@@ -57,18 +57,21 @@ elements that this skill affords.
 ## File Structure
 
 Shaping work can use either a single-file document format or a directory format.
+Either way, each breadboard contains all core tables in one document for easy
+iteration.
 
 ### Single-file format
 
-This is a legacy format. It looks like this:
+This is a legacy format. Recognize existing single-file shapes, but create new
+shapes in the directory format. It looks like this:
 
 `docs/shaping/NN-[feature-name].md`
 
 Example: `docs/shaping/01-my-feature.md`
 
-### Directory form
+### Directory format
 
-By default, please use this form. Very helpful when the shape has supporting
+By default, please use this format. Very helpful when the shape has supporting
 material such as PDFs, screenshots, sample data, logs, diagrams, or research
 notes:
 
@@ -97,8 +100,9 @@ whatever grouping makes the material easiest to understand for that shape. The
 example above is only illustrative.
 
 Supporting files are part of the shape context by proximity. Do not require a
-manifest, index, or supporting-material table. When working on a directory-form
-shape, inspect the directory contents first, then read only the supporting
+manifest, index, or supporting-material table. When working on a
+directory-format shape, inspect the directory contents first, then read only the
+supporting
 files that appear relevant to the current shaping question. Reference
 supporting files naturally in prose when they inform a requirement, shape,
 tradeoff, affordance, or open question.
@@ -109,9 +113,9 @@ file in its entirety in the context of this skill and the shape it is nested
 within. The nested AGENTS.md file is an extension for this skill that only
 applies to the shape being worked on.
 
-### Converting to directory form
+### Converting to directory format
 
-When converting an existing single-file shape to directory form, move:
+When converting an existing single-file shape to the directory format, move:
 
 `docs/shaping/NN-[feature-name].md`
 
@@ -126,9 +130,6 @@ point to `../../assets/example.png` from
 `docs/shaping/NN-[feature-name]/[feature-name].md`. Links to supporting files
 placed inside the new shape directory should be rewritten relative to the new
 markdown file location.
-
-Each breadboard should contain all core tables in one document for easy
-iteration.
 
 ---
 
@@ -275,18 +276,17 @@ When the user says:
 
 Please make sure to remove all unnecessary language and verbiage. You must keep
 the language as simple and spare as possible. If a single sentence will
-suffice, then only use a single sentence. Don't aggregate edits, instead you
-must resolve.
+suffice, then only use a single sentence. When editing, rewrite the section in
+place rather than appending amendments.
 
 We must keep requirements as clear and plain as possible. It should reflect the
-user story and motivation of the end user. If the goal is to build tool, then
+user story and motivation of the end user. If the goal is to build a tool, then
 the requirements reflect the user that holds it. If the goal is a website, it's
 the user that browses it.
 
-If there is a requirement with large and complex descriptions, this could
-indicate if there are shaping level details that could be extracted out to the
-shaping section. Carefully review to see it there are shaping details that can
-be extracted.
+If a requirement has a large and complex description, it may contain
+shaping-level details. Carefully review it to see if any can be extracted out
+to the shaping section.
 
 Also, consider carefully if affordance details have leaked into the shape. We
 must make sure that the shape is as pure as possible and does not reflect the
