@@ -248,8 +248,8 @@ When the user says:
 → Generate/update the fit check matrix
 
 **"Choose shape [letter]"**
-→ Record the selection in the header, move the other shapes to Eliminated
-Shapes with a reason for each
+→ Set `selected_shape` in the front matter, move the other shapes to
+Eliminated Shapes with a reason for each
 
 **"Populate UI affordances"**
 → Extract UI affordances from the chosen shape
@@ -275,6 +275,21 @@ Shapes with a reason for each
 - Shapes are lettered (A, B, C), parts are numbered (A1, A1.1)
 - Always preserve the markdown file between iterations
 - Tables are the source of truth — the AI operates best on tables
+
+### Front Matter
+
+Each breadboard begins with YAML front matter:
+
+```yaml
+---
+status: draft            # draft | shaping | ready
+selected_shape: A        # shape letter; omit until a shape is chosen
+updated: 2026-07-01      # date of last substantive edit
+---
+```
+
+The feature name and number are not duplicated here; they live in the H1 and
+the file path.
 
 ### Conciseness
 
@@ -329,11 +344,12 @@ When starting a new breadboard, use this markdown template:
 
 
 ````
-# Shape: [Feature Name]
+---
+status: draft
+updated: [date]
+---
 
-> Status: Draft | Shaping | Ready
-> Selected shape: [letter, once chosen]
-> Last updated: [date]
+# Shape: [Feature Name]
 
 ## Problem Statement
 
