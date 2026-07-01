@@ -167,7 +167,6 @@ A "shape" is a solution approach. Define mechanisms that make it work.
 Use `~` prefix for parts that are optional/nice-to-have.
 
 **Notes on writing mechanisms:**
-- Reference affordance IDs (N#, U#) when describing data flow
 - Include removal of existing functionality when replacing/simplifying
 - Can reference key files when location matters
 
