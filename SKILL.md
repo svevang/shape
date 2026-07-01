@@ -357,11 +357,11 @@ When starting a new breadboard, use this markdown template:
 
 ## Fit Check
 
-| ID | Requirement | Status | Current | A |
-|----|-------------|--------|---------|---|
-| R0 | | Core goal | | |
+| ID | Requirement | Current | A |
+|----|-------------|---------|---|
+| R0 | | | |
 
-Status values: `Core goal`, `Must-have`, `Should`, `Out`, `Undecided`
+Legend: ✅ = satisfied, ❌ = not satisfied, – = not applicable
 
 ---
 
