@@ -128,25 +128,27 @@ Then converse naturally using shaping commands:
 | `Add requirement: [description]` | Add a row to the requirements table |
 | `Propose a shape` | Generate a solution approach that addresses requirements |
 | `Fit check` | Create/update matrix showing how shapes satisfy requirements |
+| `Choose shape [letter]` | Record the selection, move other shapes to Eliminated Shapes |
 | `Populate UI affordances` | Extract user-facing elements from the chosen shape |
 | `Populate code affordances` | Extract backend/code elements from the shape |
 | `Wire it up` | Connect affordances and generate a wiring diagram |
 | `Show breadboard` | Display current state of all tables |
-| `Where did we leave off?` | Summarize selected shape, fit check status, what's unsolved |
+| `Where did we leave off?` | Summarize selected shape, fit check status, open questions |
 
 ## Output
 
 Breadboards can be saved as either a file or a directory:
 
 ```text
-# single file form
+# single-file format (legacy)
 docs/shaping/NN-[feature-name].md
-# directory form
+# directory format (default)
 docs/shaping/NN-[feature-name]/[feature-name].md
 ```
 
-Use the directory form when a shape has supporting material. The supporting
-file layout inside the directory is flexible.
+New breadboards use the directory format, which keeps supporting material
+alongside the document. The supporting file layout inside the directory is
+flexible.
 
 ```text
 docs/shaping/02-import-flow/
@@ -159,7 +161,8 @@ docs/shaping/02-import-flow/
     research.md
 ```
 
-Breadboards contain:
+Breadboards open with YAML front matter (`status`, `selected_shape`,
+`updated`) and contain:
 
 1. **Requirements** - What must be accomplished (with IDs and priorities)
 2. **Shapes** - Solution approaches with named mechanisms
