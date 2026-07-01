@@ -56,11 +56,11 @@ elements that this skill affords.
 
 ## File Structure
 
-Shaping work can use either a single-file form or a directory form.
+Shaping work can use either a single-file document format or a directory format.
 
-### Single-file form
+### Single-file format
 
-This is a legacy format. Use this when the shape has no supporting files:
+This is a legacy format. It looks like this:
 
 `docs/shaping/NN-[feature-name].md`
 
@@ -87,9 +87,10 @@ docs/shaping/02-import-flow/
     research.md
 ```
 
-When an entry under `docs/shaping` is a directory, treat the matching markdown
-file inside it as the primary breadboard. The repeated feature name is
-intentional so the document keeps its identity if copied or emailed by itself.
+When an entry under `docs/shaping` is a directory, treat the markdown file with
+the matching name inside it as the primary document. The repeated feature name
+is intentional so the document keeps its identity if copied or emailed by
+itself.
 
 The supporting file layout inside the directory is intentionally flexible; use
 whatever grouping makes the material easiest to understand for that shape. The
