@@ -44,10 +44,93 @@ moving. For each step:
 4. **Offer** — only draft content when the user asks, or when they're clearly stuck
 
 Never auto-fill a section unprompted. If the user gives a vague answer, ask a
-follow-up rather than guessing. When you do draft, present it as a proposal
-("here's a starting point — edit freely") not a finished artifact.
+follow-up rather than guessing. When you do start to draft something, present
+it as a proposal ("here's a starting point — edit freely") not a finished
+artifact.
+
+There is an exception to this: If the user asks you to write the entire thing
+for them, then you may go ahead and author the entire set of contingent
+elements that this skill affords.
 
 ---
+
+## File Structure
+
+Shaping work can use either a single-file form or a directory form.
+
+### Single-file form
+
+This is a legacy format. Use this when the shape has no supporting files:
+
+`docs/shaping/NN-[feature-name].md`
+
+Example: `docs/shaping/01-my-feature.md`
+
+### Directory form
+
+By default, please use this form. Very helpful when the shape has supporting
+material such as PDFs, screenshots, sample data, logs, diagrams, or research
+notes:
+
+`docs/shaping/NN-[feature-name]/[feature-name].md`
+
+Example:
+
+```text
+docs/shaping/02-import-flow/
+  AGENTS.md
+  import-flow.md
+  resources/
+    product-brief.pdf
+    current-flow.png
+  notes/
+    research.md
+```
+
+When an entry under `docs/shaping` is a directory, treat the matching markdown
+file inside it as the primary breadboard. The repeated feature name is
+intentional so the document keeps its identity if copied or emailed by itself.
+
+The supporting file layout inside the directory is intentionally flexible; use
+whatever grouping makes the material easiest to understand for that shape. The
+example above is only illustrative.
+
+Supporting files are part of the shape context by proximity. Do not require a
+manifest, index, or supporting-material table. When working on a directory-form
+shape, inspect the directory contents first, then read only the supporting
+files that appear relevant to the current shaping question. Reference
+supporting files naturally in prose when they inform a requirement, shape,
+tradeoff, affordance, or open question.
+
+If there is an AGENTS.md file in the directory it will provide you with
+additional shape-specific context, workflows, and details. Please read this
+file in its entirety in the context of this skill and the shape it is nested
+within. The nested AGENTS.md file is an extension for this skill that only
+applies to the shape being worked on.
+
+### Converting to directory form
+
+When converting an existing single-file shape to directory form, move:
+
+`docs/shaping/NN-[feature-name].md`
+
+to:
+
+`docs/shaping/NN-[feature-name]/[feature-name].md`
+
+After moving the file, update relative links inside the markdown because the
+document is now one directory deeper. For example, a link that used to point to
+`../assets/example.png` from `docs/shaping/NN-[feature-name].md` may need to
+point to `../../assets/example.png` from
+`docs/shaping/NN-[feature-name]/[feature-name].md`. Links to supporting files
+placed inside the new shape directory should be rewritten relative to the new
+markdown file location.
+
+Each breadboard should contain all core tables in one document for easy
+iteration.
+
+---
+
 
 ## Table Formats
 
@@ -233,82 +316,6 @@ mistake.
 Decision history belongs in eliminated shapes, open questions, or short notes
 when it helps implementation judgment. The main shape should read as the
 present design, not as a precise history of how each decision was reached.
-
----
-
-## File Structure
-
-Shaping work can use either a single-file form or a directory form.
-
-### Single-file form
-
-Use this when the shape has no supporting files:
-
-`docs/shaping/NN-[feature-name].md`
-
-Example: `docs/shaping/01-my-feature.md`
-
-### Directory form
-
-Use this when the shape has supporting material such as PDFs, screenshots,
-sample data, logs, diagrams, or research notes:
-
-`docs/shaping/NN-[feature-name]/[feature-name].md`
-
-Example:
-
-```text
-docs/shaping/02-import-flow/
-  AGENTS.md
-  import-flow.md
-  resources/
-    product-brief.pdf
-    current-flow.png
-  notes/
-    research.md
-```
-
-When an entry under `docs/shaping` is a directory, treat the matching markdown
-file inside it as the primary breadboard. The repeated feature name is
-intentional so the document keeps its identity if copied or emailed by itself.
-
-The supporting file layout inside the directory is intentionally flexible; use
-whatever grouping makes the material easiest to understand for that shape. The
-example above is only illustrative.
-
-Supporting files are part of the shape context by proximity. Do not require a
-manifest, index, or supporting-material table. When working on a directory-form
-shape, inspect the directory contents first, then read only the supporting
-files that appear relevant to the current shaping question. Reference
-supporting files naturally in prose when they inform a requirement, shape,
-tradeoff, affordance, or open question.
-
-If there is an AGENTS.md file in the directory it will provide you with
-additional shape-specific context, workflows, and details. Please read this
-file in its entirety in the context of this skill and the shape it is nested
-within. The nested AGENTS.md file is an extension for this skill that only
-applies to the shape being worked on.
-
-### Converting to directory form
-
-When converting an existing single-file shape to directory form, move:
-
-`docs/shaping/NN-[feature-name].md`
-
-to:
-
-`docs/shaping/NN-[feature-name]/[feature-name].md`
-
-After moving the file, update relative links inside the markdown because the
-document is now one directory deeper. For example, a link that used to point to
-`../assets/example.png` from `docs/shaping/NN-[feature-name].md` may need to
-point to `../../assets/example.png` from
-`docs/shaping/NN-[feature-name]/[feature-name].md`. Links to supporting files
-placed inside the new shape directory should be rewritten relative to the new
-markdown file location.
-
-Each breadboard should contain all core tables in one document for easy
-iteration.
 
 ---
 
