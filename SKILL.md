@@ -324,7 +324,7 @@ present design, not as a precise history of how each decision was reached.
 When starting a new breadboard, use this markdown template:
 
 
-```
+````
 # Shape: [Feature Name]
 
 > Status: Draft | Shaping | Ready
@@ -410,4 +410,4 @@ Status values: `Core goal`, `Must-have`, `Should`, `Out`, `Undecided`
 ## Open Questions
 
 - [ ]
-```
+````
