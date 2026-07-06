@@ -90,6 +90,19 @@ Legend: ✅ = satisfied, ❌ = not satisfied, – = not applicable
 
 ---
 
+## Slices
+
+| #    | Slice | Builds | Proves | Depends On |
+|------|-------|--------|--------|------------|
+| S1   | **Slices table format** | | | |
+| S1.1 | Table format section with placement and columns | U1, U2, U3, U4 | R0, R1, R2, R3 | |
+| S1.2 | `S` ID convention and sequential-default dependency rule | N5 | | |
+| S1.3 | Slices section in the breadboard template | N4 | | |
+| S2   | **Workflow commands** | N1, N2, N6 | | |
+| ~S3  | **Slice check** | N3 | ~R4 | S1 |
+
+---
+
 ## Wiring Diagram
 
 ```
