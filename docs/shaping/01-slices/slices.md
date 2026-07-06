@@ -1,5 +1,5 @@
 ---
-status: shaping
+status: ready
 selected_shape: A
 updated: 2026-07-06
 ---
@@ -21,7 +21,7 @@ knows what to build first and when something is demoable.
 |-----|-------------|----------|
 | R0  | Partition a shaped feature into shippable increments (slices) | Must |
 | R1  | Each slice lists the affordances it builds and the requirements it proves | Must |
-| R2  | A slice breaks down into sub-slices — the individual commits/changes within it | Must |
+| R2  | A slice breaks down into sub-slices — smaller changes within it | Must |
 | R3  | Slices express dependencies: sequential by default, parallel/independent when possible | Must |
 | ~R4 | Verify every must-have affordance is claimed by some slice | Could |
 
@@ -35,8 +35,8 @@ knows what to build first and when something is demoable.
 | A1.1 | New section in the breadboard between Non-UI Affordances and Wiring Diagram |
 | A1.2 | Columns: `#`, `Slice`, `Builds` (U#/N# refs), `Proves` (R# refs), `Depends On` (S# refs) |
 | A1.3 | Slice rows (`S1`, `S2`) are shippable increments, named in bold like shape subsystems |
-| A1.4 | Sub-slice rows (`S1.1`, `S1.2`) are the individual commits/changes within a slice |
-| A1.5 | `Builds`/`Proves` live on sub-slice rows when they exist; on the slice row otherwise |
+| A1.4 | Sub-slice rows (`S1.1`, `S1.2`) are some changes within a slice |
+| A1.5 | `Builds`/`Proves` live on slice and sub-slice rows; either cell may be left blank |
 | A2   | **Dependencies** |
 | A2.1 | Slices are sequential by default: each implicitly depends on the previous slice |
 | A2.2 | `Depends On` overrides the default — explicit S# refs, or `–` for independent/parallel |
@@ -58,7 +58,7 @@ knows what to build first and when something is demoable.
 |----|-------------|---------|---|
 | R0 | Partition a shaped feature into shippable increments (slices) | ❌ | ✅ |
 | R1 | Each slice lists the affordances it builds and the requirements it proves | ❌ | ✅ |
-| R2 | A slice breaks down into sub-slices — the individual commits/changes within it | ❌ | ✅ |
+| R2 | A slice breaks down into sub-slices — smaller changes within it | ❌ | ✅ |
 | R3 | Slices express dependencies: sequential by default, parallel/independent when possible | ❌ | ✅ |
 | ~R4 | Verify every must-have affordance is claimed by some slice | ❌ | ✅ |
 
@@ -72,7 +72,7 @@ Legend: ✅ = satisfied, ❌ = not satisfied, – = not applicable
 |----|-------|------------|-------------|-----------|
 | U1 | Breadboard document (new section) | Slices table | Sits between Non-UI Affordances and Wiring Diagram; columns `#`, `Slice`, `Builds`, `Proves`, `Depends On` | U2 |
 | U2 | Slices table | Slice row (`S#`) | Bold-named shippable increment | U3, U4 |
-| U3 | Slices table | Sub-slice row (`S#.#`) | Individual commit/change; carries `Builds`/`Proves` when present | |
+| U3 | Slices table | Sub-slice row (`S#.#`) | A change within a slice; carries `Builds`/`Proves` when present | |
 | U4 | Slices table | `Depends On` cell | Overrides the sequential default: explicit S# refs, or `–` for independent/parallel | |
 
 ---
