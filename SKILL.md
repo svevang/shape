@@ -288,6 +288,9 @@ Eliminated Shapes with a reason for each
 **"Add slice: [description]"**
 → Append a slice with the next available S#
 
+**"Slice check"**
+→ Report must-have affordances not claimed by any slice's Builds column
+
 **"Wire it up"**
 → Add Wires Out column values and generate wiring diagram
 
