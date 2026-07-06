@@ -282,6 +282,12 @@ Eliminated Shapes with a reason for each
 **"Populate code affordances"**
 → Extract code/non-UI affordances from the chosen shape
 
+**"Slice it up"**
+→ Partition the affordances into slices, generating the slices table
+
+**"Add slice: [description]"**
+→ Append a slice with the next available S#
+
 **"Wire it up"**
 → Add Wires Out column values and generate wiring diagram
 
@@ -289,7 +295,7 @@ Eliminated Shapes with a reason for each
 → Display the current state of all tables
 
 **"Where did we leave off?" / "Resume shaping"**
-→ Summarize: selected shape, fit check status, open questions
+→ Summarize: selected shape, fit check status, slice status, open questions
 
 ---
 
