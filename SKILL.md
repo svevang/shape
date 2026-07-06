@@ -28,11 +28,12 @@ and list the existing shaping files.
 - **UI Affordance**: Something a user sees/interacts with (button, field, list, status display)
 - **Code Affordance**: Something you call that does work (handler, query, service, table)
 - **Breadboard Wires**: Connections showing what calls/uses what
+- **Slice**: A shippable increment of the shaped work. Sub-slices are smaller changes within a slice.
 
 ### Process Flow
 
 ```
-Requirements → Shapes → Fit Check → Affordances → Wiring
+Requirements → Shapes → Fit Check → Affordances → Slices → Wiring
 ```
 
 Your role is **facilitator, not author**. The user leads; you keep the process
@@ -208,7 +209,31 @@ Legend: ✅ = satisfied, ❌ = not satisfied, – = not applicable
 | N2 | [Component] | [affordance] | [description] | [N#, U#] |
 ```
 
-### 6. Wiring Diagram
+### 6. Slices Table
+Partition the affordances into shippable increments. Sits between Non-UI
+Affordances and the Wiring Diagram.
+
+```markdown
+## Slices
+
+| #    | Slice | Builds | Proves | Depends On |
+|------|-------|--------|--------|------------|
+| S1   | **[Increment name]** | | | |
+| S1.1 | [A change within the slice] | [U#/N# refs] | [R# refs] | |
+| S1.2 | [Another change] | [U#/N# refs] | | |
+| S2   | **[Next increment]** | [U#/N# refs] | [R# refs] | |
+| ~S3  | **[Nice-to-have increment]** | [U#/N# refs] | [R# refs] | S1 |
+```
+
+- `Builds` lists the affordances the slice implements; `Proves` lists the
+  requirements that are demoable once it ships
+- `Builds`/`Proves` live on slice and sub-slice rows; either cell may be left
+  blank
+- Slices are sequential by default: each implicitly depends on the previous
+  slice. `Depends On` overrides the default — explicit S# refs, or `–` for
+  independent/parallel.
+
+### 7. Wiring Diagram
 ASCII diagram showing flow between affordances, grouped by place/trigger.
 
 ```markdown
@@ -270,9 +295,10 @@ Eliminated Shapes with a reason for each
 
 ## Conventions
 
-- IDs use prefixes: `R` = requirement, `U` = UI affordance, `N` = non-UI affordance
+- IDs use prefixes: `R` = requirement, `U` = UI affordance, `N` = non-UI affordance, `S` = slice
 - `~` prefix means "nice-to-have" or "out of scope for v1"
 - Shapes are lettered (A, B, C), parts are numbered (A1, A1.1)
+- Slices are numbered (S1, S1.1) and sequential by default; `Depends On` overrides
 - Always preserve the markdown file between iterations
 - Tables are the source of truth — the AI operates best on tables
 
@@ -399,6 +425,14 @@ Legend: ✅ = satisfied, ❌ = not satisfied, – = not applicable
 | #  | Component | Affordance | Description | Wires Out |
 |----|-----------|------------|-------------|-----------|
 | N1 | | | | |
+
+---
+
+## Slices
+
+| #  | Slice | Builds | Proves | Depends On |
+|----|-------|--------|--------|------------|
+| S1 | | | | |
 
 ---
 
