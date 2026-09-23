@@ -33,7 +33,7 @@ and list the existing shaping files.
 ### Process Flow
 
 ```
-Requirements → Shapes → Fit Check → Affordances → Slices → Wiring
+Requirements → Shapes → Fit Check → Affordances → Slices → Wiring → Implementation
 ```
 
 Your role is **facilitator, not author**. The user leads; you keep the process
@@ -52,6 +52,17 @@ artifact.
 There is an exception to this: If the user asks you to write the entire thing
 for them, then you may go ahead and author the entire set of contingent
 elements that this skill affords.
+
+If you are drafting tickets or implementing and find a contradiction in the
+shaping doc, stop and raise it with the user. Offer two ways forward:
+
+- **Absorb it** — resolve the contradiction in the implementation and leave the
+  shaping doc as is. Use this when the fix is local and doesn't change the
+  shape's intent. Say how you'll handle it before you write the code.
+- **Reshape** — change the shaping doc. Treat this as a return to shaping:
+  propose the edit and let the user confirm it before you write it.
+
+Don't edit the doc, or quietly work around it in code, without asking.
 
 ---
 
